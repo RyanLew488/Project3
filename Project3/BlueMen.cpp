@@ -5,6 +5,7 @@ BlueMen::BlueMen()
 {
 	strength = 12;
 	armor = 3;
+	chrType = "BlueMen";
 
 }
 

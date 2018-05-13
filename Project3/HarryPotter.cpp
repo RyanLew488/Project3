@@ -6,6 +6,7 @@ HarryPotter::HarryPotter()
 {
 	strength = 10;
 	armor = 0;
+	chrType = "HarryPotter";
 }
 
 
@@ -16,7 +17,8 @@ HarryPotter::~HarryPotter()
 int HarryPotter::attack()
 {
 	int atk = diceRoll(2, 6);
-	return 0;
+	std::cout << "Harry attacks for " << atk << std::endl;
+	return atk;
 }
 
 void HarryPotter::defend(int damage)
@@ -37,7 +39,7 @@ void HarryPotter::defend(int damage)
 		}
 		else
 		{
-			std::cout << "The Barbarian has " << strength << " points of strength left\n";
+			std::cout << "Harry Potter has " << strength << " points of strength left\n";
 		}
 	}
 	if (strength == 0 && hogwarts)

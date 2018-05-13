@@ -6,6 +6,7 @@ class Character
 protected:
 	int armor;
 	int strength;
+	std::string chrType;
 
 public:
 	Character();
@@ -14,4 +15,5 @@ public:
 	int diceRoll(int numRolls, int numSides);
 	void setStength(int strength);
 	int getStrength();
+	std::string getType();
 };

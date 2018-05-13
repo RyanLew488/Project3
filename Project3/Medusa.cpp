@@ -5,6 +5,7 @@ Medusa::Medusa()
 {
 	strength = 8;
 	armor = 3;
+	chrType = "Medusa";
 }
 
 Medusa::~Medusa()
@@ -21,6 +22,7 @@ int Medusa::attack()
 	}
 	else
 	{
+		std::cout << "Medusa attacks for " << atk << std::endl;
 		return atk;
 	}
 }

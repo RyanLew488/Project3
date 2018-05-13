@@ -1,14 +1,12 @@
 #include <iostream>
 #include "Vampire.hpp"
 
-
-
 Vampire::Vampire()
 {
 	strength = 18;
 	armor = 1;
+	chrType = "Vampire";
 }
-
 
 Vampire::~Vampire()
 {
@@ -17,20 +15,20 @@ Vampire::~Vampire()
 
 int Vampire::attack()
 {
-	int atk;
-	atk = diceRoll(1, 12);
+	int atk = diceRoll(1, 12);
+	std::cout << "The Vamipire attacks for " << atk << " damage\n";
 	return atk;
 }
 
 void Vampire::defend(int damage)
-{
+{	
 	int blocked;
 	int damageTaken;
-	int charm;
+	int charm = 0;
 
 	charm = rand() % 2;
 
-	if (charm = 1)
+	if (charm == 1)
 	{
 		std::cout << "The Vampire has charmed his opponent he takes no damage\n";
 	}

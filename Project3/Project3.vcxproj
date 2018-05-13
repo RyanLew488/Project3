@@ -120,6 +120,7 @@
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="HarryPotter.hpp" />
+    <ClInclude Include="helperFunctions.hpp" />
     <ClInclude Include="Medusa.hpp" />
     <ClInclude Include="Vampire.hpp" />
   </ItemGroup>
@@ -127,8 +128,10 @@
     <ClCompile Include="Barbarian.cpp" />
     <ClCompile Include="BlueMen.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="fightMain.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HarryPotter.cpp" />
+    <ClCompile Include="helperFunctions.cpp" />
     <ClCompile Include="Medusa.cpp" />
     <ClCompile Include="Vampire.cpp" />
   </ItemGroup>

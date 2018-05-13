@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Barbarian.hpp"
 
-
 Barbarian::Barbarian()
 {
 	strength = 12;
 	armor = 0;
+	chrType = "Barbarian";
 }
 
 int Barbarian::attack()
