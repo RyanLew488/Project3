@@ -4,7 +4,7 @@ class Medusa : public Character
 {
 public:
 	int attack();
-	void defense(int damage);
+	void defend(int damage);
 	Medusa();
 	~Medusa();
 };

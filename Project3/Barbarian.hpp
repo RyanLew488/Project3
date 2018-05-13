@@ -6,6 +6,6 @@ class Barbarian : public Character
 public:
 	Barbarian();
 	int attack();
-	void defend(int damage)();
+	void defend(int damage);
 
 };

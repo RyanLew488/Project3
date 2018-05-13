@@ -6,6 +6,6 @@ public:
 	Vampire();
 	~Vampire();
 	int attack();
-	void defense(int damage);
+	void defend(int damage);
 };
 

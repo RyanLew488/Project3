@@ -4,6 +4,7 @@
 BlueMen::BlueMen()
 {
 	strength = 12;
+	armor = 3;
 
 }
 
@@ -15,7 +16,7 @@ BlueMen::~BlueMen()
 int BlueMen::attack()
 {
 	int atk = diceRoll(2,10);
-	"The Blue Men attack for " << atk << std::endl;
+	std::cout << "The Blue Men attack for " << atk << std::endl;
 	return atk;
 }
 

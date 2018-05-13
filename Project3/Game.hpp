@@ -12,11 +12,12 @@
 class Game
 {
 private:
-	Character chr1;
-	Character chr2;
+	Character* chr1;
+	Character* chr2;
 
 public:
 	Game(int type1, int type2);
-	void fight();
+	void gamePlay();
+	void fight(Character* turn1, Character* turn2);
 	~Game();
 };

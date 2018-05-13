@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Vampire.hpp"
 
 
@@ -17,11 +18,11 @@ Vampire::~Vampire()
 int Vampire::attack()
 {
 	int atk;
-	atk = 
-	return 0;
+	atk = diceRoll(1, 12);
+	return atk;
 }
 
-void Vampire::defense(int damage)
+void Vampire::defend(int damage)
 {
 	int blocked;
 	int damageTaken;

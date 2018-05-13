@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Medusa.hpp"
 
 Medusa::Medusa()
@@ -24,7 +25,7 @@ int Medusa::attack()
 	}
 }
 
-void Medusa::defense(int damage)
+void Medusa::defend(int damage)
 {
 	int blocked = diceRoll(1, 6);
 	std::cout << "Medusa defended " << blocked << " amount of damage\n";

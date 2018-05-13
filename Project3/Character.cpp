@@ -10,7 +10,7 @@ int Character::diceRoll(int numRolls, int numSides)
 
 	for (int i = 0; i < numRolls; i++)
 	{
-		accumulator += (rand() % numRolls) + 1  //rand() will be seeded in main.
+		accumulator += (rand() % numRolls) + 1;  //rand() will be seeded in main.
 	}
 	return accumulator;
 }
