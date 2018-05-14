@@ -1,3 +1,9 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Character implementation file. Character is a subclass
+**				of the Character class.
+*********************************************************************/
 #include <string>
 #include "Character.hpp"
 

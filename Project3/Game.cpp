@@ -1,9 +1,16 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Game implementation file. Contains Character class 
+**				Objects.
+*********************************************************************/
 #include "Game.hpp"
 #include <string>
 
 
 Game::Game(int chr1, int chr2)
 {
+	//create a creature object based on the user choice
 	switch (chr1)
 	{
 	case 1:
@@ -41,7 +48,7 @@ Game::Game(int chr1, int chr2)
 			break;
 		}
 	}
-
+	//create a creature object based on the user choice
 	switch (chr2)
 	{
 	case 1:

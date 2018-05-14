@@ -1,3 +1,9 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Harry Potter implementation file. Harry Potter is a subclass
+**				of the Character class.
+*********************************************************************/
 #include <iostream>
 #include "HarryPotter.hpp"
 
@@ -21,6 +27,9 @@ int HarryPotter::attack()
 	return atk;
 }
 
+/*********************************************************************
+** Description: Harry potter comes back to life with 20 str after first death
+*********************************************************************/
 void HarryPotter::defend(int damage)
 {
 	int blocked = diceRoll(2, 6);
@@ -42,7 +51,7 @@ void HarryPotter::defend(int damage)
 			std::cout << "Harry Potter has " << strength << " points of strength left\n";
 		}
 	}
-	if (strength == 0 && hogwarts)
+	if (strength == 0 && hogwarts) 
 	{
 		std::cout << "Harry came back to life!\n";
 		strength = 20;

@@ -1,3 +1,9 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Medusa implementation file. Medusa is a subclass
+**				of the Character class.
+*********************************************************************/
 #include <iostream>
 #include "Medusa.hpp"
 
@@ -12,10 +18,13 @@ Medusa::~Medusa()
 {
 }
 
+/*********************************************************************
+** Description:Medusa 1 shot kills anyone on a natural 12
+*********************************************************************/
 int Medusa::attack()
 {
 	int atk = diceRoll(2, 6);
-	if (atk = 12)
+	if (atk == 12)
 	{
 		std::cout << "Medusa Glares at her opponent...It's super effective!\n";
 		return 1000;

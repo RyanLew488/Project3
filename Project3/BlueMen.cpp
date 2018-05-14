@@ -1,3 +1,9 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Bluemen implementation file. Bluemen is a subclass
+**				of the Character class.
+*********************************************************************/
 #include <iostream>
 #include "BlueMen.hpp"
 
@@ -8,7 +14,6 @@ BlueMen::BlueMen()
 	chrType = "BlueMen";
 
 }
-
 
 BlueMen::~BlueMen()
 {
@@ -21,6 +26,9 @@ int BlueMen::attack()
 	return atk;
 }
 
+/*********************************************************************
+** Description: Bluemens lose a defend die each time they take 4 points of damage
+*********************************************************************/
 void BlueMen::defend(int damage)
 {
 	int blocked;
@@ -42,7 +50,7 @@ void BlueMen::defend(int damage)
 	}
 	damageTaken = damage - (blocked + armor);
 	
-	if (damageTaken < 0)
+	if (damageTaken > 0)
 	{
 		strength = strength - damageTaken;
 

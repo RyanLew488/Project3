@@ -1,3 +1,9 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Game header file. Contains Character class
+**				Objects.
+*********************************************************************/
 #pragma once
 #include <iostream>
 #include <cstdlib>

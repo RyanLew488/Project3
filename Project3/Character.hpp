@@ -1,3 +1,8 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Character header file. Character is an abstract class
+*********************************************************************/
 #pragma once
 #include <cstdlib>
 

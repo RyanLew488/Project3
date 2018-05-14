@@ -1,3 +1,9 @@
+/*********************************************************************
+** Author:Ryan Lew
+** Date: 5/10/2018
+** Description: Barbarian implementation file. Barbarian is a subclass
+**				of the Character class.
+*********************************************************************/
 #include <iostream>
 #include "Barbarian.hpp"
 
