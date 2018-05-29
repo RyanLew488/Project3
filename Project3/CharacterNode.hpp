@@ -16,36 +16,38 @@ struct CharacterNode
 
 	CharacterNode(int type, std::string name)
 	{
-		case 1: //vampire
+		switch (type)
 		{
-			fighter = new Vampire(name);
-			break;
-		}
+			case 1: //vampire
+			{
+				fighter = new Vampire(name);
+				break;
+			}
 
-		case 2:
-		{
-			fighter = new Barbarian(name);
-			break;
-		}
+			case 2:
+			{
+				fighter = new Barbarian(name);
+				break;
+			}
 
-		case 3:
-		{
-			fighter = new BlueMen(name);
-			break;
-		}
+			case 3:
+			{
+				fighter = new BlueMen(name);
+				break;
+			}
 
-		case 4:
-		{
-			fighter = new Medusa(name);
-			break;
-		}
+			case 4:
+			{
+				fighter = new Medusa(name);
+				break;
+			}
 
-		case 5:
-		{
-			fighter = new HarryPotter(name);
-			break;
+			case 5:
+			{
+				fighter = new HarryPotter(name);
+				break;
+			}
 		}
-
 		prev = nullptr;
 		next = nullptr;
 	}

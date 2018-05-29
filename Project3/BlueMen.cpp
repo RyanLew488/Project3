@@ -5,6 +5,7 @@
 **				of the Character class.
 *********************************************************************/
 #include <iostream>
+#include <string>
 #include "BlueMen.hpp"
 
 BlueMen::BlueMen(std::string name)

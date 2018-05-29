@@ -5,6 +5,7 @@
 **				of the Character class.
 *********************************************************************/
 #include <iostream>
+#include <string>
 #include "Medusa.hpp"
 
 Medusa::Medusa(std::string name)

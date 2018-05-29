@@ -22,8 +22,8 @@ private:
 	Character* chr2;
 
 public:
-	Game(int type1, int type2);
+	Game();
 	void gamePlay();
-	void fight(Character* turn1, Character* turn2);
+	void fight();
 	~Game();
 };

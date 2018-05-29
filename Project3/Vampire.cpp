@@ -5,9 +5,10 @@
 **				of the Character class.
 *********************************************************************/
 #include <iostream>
+#include <string>
 #include "Vampire.hpp"
 
-Vampire::Vampire()
+Vampire::Vampire(std::string name)
 {
 	setName(name);
 	strength = 18;
@@ -29,7 +30,6 @@ int Vampire::attack()
 
 void Vampire::defend(int damage)
 {	
-	int blocked;
 	int damageTaken;
 	int charm = 0;
 

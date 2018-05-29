@@ -5,6 +5,7 @@
 **				of the Character class.
 *********************************************************************/
 #include <iostream>
+#include <string>
 #include "Barbarian.hpp"
 
 Barbarian::Barbarian(std::string name)

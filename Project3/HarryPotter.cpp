@@ -5,6 +5,7 @@
 **				of the Character class.
 *********************************************************************/
 #include <iostream>
+#include <string>
 #include "HarryPotter.hpp"
 
 

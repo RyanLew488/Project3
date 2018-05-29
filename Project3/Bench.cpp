@@ -14,7 +14,7 @@ void Bench::addFighter(int type, std::string name)
 		back = front;
 		front->next = back;
 		front->prev = back;
-		back-> = front;
+		back->next = front;
 		back->prev = front;
 	}
 	else
@@ -24,7 +24,7 @@ void Bench::addFighter(int type, std::string name)
 		back->next = temp;
 		temp->prev = back;
 		temp->next = front;
-		back = tmep;
+		back = temp;
 
 	}
 }
@@ -78,7 +78,7 @@ void Bench::addBack(CharacterNode * fighter)
 	}
 	else
 	{
-		//add a new object to the end of the list
+	
 		CharacterNode *temp = fighter;
 		front->prev = temp;
 		back->next = temp;
