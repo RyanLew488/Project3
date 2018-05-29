@@ -7,8 +7,9 @@
 #include <iostream>
 #include "Barbarian.hpp"
 
-Barbarian::Barbarian()
+Barbarian::Barbarian(std::string name)
 {
+	setName(name);
 	strength = 12;
 	armor = 0;
 	chrType = "Barbarian";
@@ -17,7 +18,7 @@ Barbarian::Barbarian()
 int Barbarian::attack()
 {
 	int atk = diceRoll(2, 6);
-	std::cout << "The Barbarian attacks for " << atk << std::endl;
+	std::cout << getName() << " attacks for " << atk << std::endl;
 	return atk;
 }
 

@@ -80,7 +80,8 @@ int iRangeValid(std::string message, int lowerBound, int upperBound) {
 
 bool yesNoValidation() {
 
-	std::cout << "Would you to fight two characters?\n";
+	std::cout << "Welcome to the Monster fighter game\n";
+	std::cout << "Would you like to fight some monsters?\n";
 	bool answer = false;
 	bool valid = false;
 	std::string input;

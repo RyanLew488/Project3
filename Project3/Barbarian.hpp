@@ -10,7 +10,7 @@
 class Barbarian : public Character
 {
 public:
-	Barbarian();
+	Barbarian(std::string name);
 	int attack();
 	void defend(int damage);
 

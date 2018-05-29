@@ -12,7 +12,7 @@ public:
 	int attack();
 	void defend(int damage);
 	bool hogwarts;
-	HarryPotter();
+	HarryPotter(std::string name);
 	~HarryPotter();
 };
 

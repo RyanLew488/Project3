@@ -12,6 +12,16 @@ Character::Character()
 {
 }
 
+void Character::setName(std::string name)
+{
+	this->name = name;
+}
+
+std::string Character::getName()
+{
+	return name;
+}
+
 int Character::diceRoll(int numRolls, int numSides)
 {
 	int accumulator = 0;

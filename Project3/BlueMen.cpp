@@ -7,8 +7,9 @@
 #include <iostream>
 #include "BlueMen.hpp"
 
-BlueMen::BlueMen()
+BlueMen::BlueMen(std::string name)
 {
+	setName(name);
 	strength = 12;
 	armor = 3;
 	chrType = "BlueMen";
@@ -22,7 +23,7 @@ BlueMen::~BlueMen()
 int BlueMen::attack()
 {
 	int atk = diceRoll(2,10);
-	std::cout << "The Blue Men attack for " << atk << std::endl;
+	std::cout << getName() << " attacks for " << atk << std::endl;
 	return atk;
 }
 

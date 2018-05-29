@@ -11,7 +11,7 @@ class Medusa : public Character
 public:
 	int attack();
 	void defend(int damage);
-	Medusa();
+	Medusa(std::string name);
 	~Medusa();
 };
 

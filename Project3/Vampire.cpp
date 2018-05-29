@@ -9,6 +9,7 @@
 
 Vampire::Vampire()
 {
+	setName(name);
 	strength = 18;
 	armor = 1;
 	chrType = "Vampire";
@@ -22,7 +23,7 @@ Vampire::~Vampire()
 int Vampire::attack()
 {
 	int atk = diceRoll(1, 12);
-	std::cout << "The Vamipire attacks for " << atk << " damage\n";
+	std::cout << getName() << " attacks for " << atk << std::endl;
 	return atk;
 }
 
@@ -36,7 +37,7 @@ void Vampire::defend(int damage)
 
 	if (charm == 1)
 	{
-		std::cout << "The Vampire has charmed his opponent he takes no damage\n";
+		std::cout << getName() << " has charmed his opponent he takes no damage\n";
 	}
 	else
 	{

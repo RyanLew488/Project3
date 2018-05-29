@@ -12,9 +12,12 @@ protected:
 	int armor;
 	int strength;
 	std::string chrType;
+	std::string name;
 
 public:
 	Character();
+	void setName(std::string name);
+	std::string getName();
 	virtual int attack() = 0;
 	virtual void defend(int damage) = 0;
 	int diceRoll(int numRolls, int numSides);

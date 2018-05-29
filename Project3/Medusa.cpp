@@ -7,8 +7,9 @@
 #include <iostream>
 #include "Medusa.hpp"
 
-Medusa::Medusa()
+Medusa::Medusa(std::string name)
 {
+	setName(name);
 	strength = 8;
 	armor = 3;
 	chrType = "Medusa";
@@ -26,12 +27,12 @@ int Medusa::attack()
 	int atk = diceRoll(2, 6);
 	if (atk == 12)
 	{
-		std::cout << "Medusa Glares at her opponent...It's super effective!\n";
+		std::cout << getName() << " Glares at their opponent...It's super effective!\n";
 		return 1000;
 	}
 	else
 	{
-		std::cout << "Medusa attacks for " << atk << std::endl;
+		std::cout << getName() << " attacks for " << atk << std::endl;
 		return atk;
 	}
 }

@@ -8,8 +8,9 @@
 #include "HarryPotter.hpp"
 
 
-HarryPotter::HarryPotter()
+HarryPotter::HarryPotter(std::string name)
 {
+	setName(name);
 	strength = 10;
 	armor = 0;
 	chrType = "HarryPotter";
@@ -23,7 +24,7 @@ HarryPotter::~HarryPotter()
 int HarryPotter::attack()
 {
 	int atk = diceRoll(2, 6);
-	std::cout << "Harry attacks for " << atk << std::endl;
+	std::cout << getName() << " attacks for " << atk << std::endl;
 	return atk;
 }
 
