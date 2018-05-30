@@ -43,6 +43,11 @@ int Character::getStrength()
 	return strength;
 }
 
+void Character::recover(int dmgtaken)
+{
+	strength += (dmgtaken / 4); //after a victory the fighter recovers 25% of their health
+}
+
 std::string Character::getType()
 {
 	return chrType;

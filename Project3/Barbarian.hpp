@@ -12,6 +12,6 @@ class Barbarian : public Character
 public:
 	Barbarian(std::string name);
 	int attack();
-	void defend(int damage);
+	int defend(int damage);
 
 };

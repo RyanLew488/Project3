@@ -9,9 +9,9 @@
 class Vampire : public Character
 {
 public:
+	int attack();
+	int defend(int damage);
 	Vampire(std::string name);
 	~Vampire();
-	int attack();
-	void defend(int damage);
 };
 

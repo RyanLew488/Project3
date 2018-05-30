@@ -7,67 +7,99 @@
 #include <string>
 #include "Game.hpp"
 #include "Bench.hpp"
+#include "helperFunctions.hpp"
 
 
-Game::Game()
+Game::Game(int benchSize)
 {
-	
+	this->benchSize = benchSize;
+	Bench* losers;
 }
 
-void Game::gamePlay() //"flip a coin" to see who goes first
+void Game::fillBench(int player)
 {
-	int coinflip = rand() % 2;
-	switch (coinflip)
-	{
-	case 0: //chr1 goes first.
-		fight(chr1, chr2);
-		break;
+	int type;
+	std::string name;
+	Bench* temp = new Bench();
 
-	case 1: //chr2 goes first.
-		fight(chr2, chr1);
+	std::cout << "Player " << player << " select "<< benchSize << " fighters.\n";
+
+	for (int i = 0; i < benchSize; i++)
+	{
+		std::cout << "Please select fighter number " << i + 1 << std::endl;
+		menu(type);
+		std::cout << "What do you want to call this fighter? " << std::endl;
+		std::getline(std::cin, name);
+		temp->addFighter(type, name);
+	}
+	switch (player)
+	{
+	case 1:
+		p1Bench = temp;
+		break;
+	case 2:
+		p2Bench = temp;
 		break;
 	}
 }
-void Game::fight(Character* turn1,Character* turn2)
+
+void Game::gamePlay() 
 {
-	std::cout << turn1->getType() << " vs " << turn2->getType() << std::endl;
-	int roundCount = 1;
-	bool noWinner = true;
-	while (noWinner)
+	int p1Score = 0;
+	int p2Score = 0;
+	int round = 1;
+
+	Character* p1Fighter = p1Bench->getFront();
+	Character* p2Fighter = p2Bench->getFront();
+
+	while (p1Fighter != nullptr && p2Fighter != nullptr)
 	{
-		std::cout << "----------Round " << roundCount << "----------\n";
-		std::cout << "Player 1: \n"
-				  << "Strength: " << turn1->getStrength() << std::endl;
-		std::cout << "Player 2: \n"
-				  << "Strength: " << turn2->getStrength() << std::endl;
-		
-		turn2->defend(turn1->attack());
-		if (turn2->getStrength() == 0)
+		int p1dmg = 0;
+		int p2dmg = 0;
+
+		int first = (rand() % 2) + 1;
+		switch (first)
 		{
-			std::cout << "Player 1 has defeated Player 2\n";
-			noWinner = false;
+			case 1: //p1 goes first
+			{
+				std::cout << "Round: " << round << "P1 will attack first.\n";
+				while (p1Fighter->getStrength() != 0 && p2Fighter->getStrength() != 0)
+				{
+					p2dmg += p2Fighter->defend(p1Fighter->attack()); //p1 attacks
+					p1dmg += p1Fighter->defend(p1Fighter->attack()); //p2 attacks
+				}
+				break;
+			}
+			case 2:
+			{
+				std::cout << "Round: " << round << "P1 will attack first.\n";
+				while (p1Fighter->getStrength() != 0 && p2Fighter->getStrength() != 0)
+				{
+					p1dmg += p1Fighter->defend(p1Fighter->attack()); //p1 attacks
+					p2dmg += p2Fighter->defend(p1Fighter->attack()); //p2 attacks
+				}
+				break;
+			}
 		}
-		else
+		if (p1Fighter->getStrength() == 0)
 		{
-			std::cout << "Player 2 has " << turn2->getStrength() << "strength left\n";
-			
-			turn1->defend(turn2->attack()); //player 2 attacks if they haven't been killed
-			if (turn1->getStrength() == 0)
-			{
-				std::cout << "Player 2 has defeated Player 1\n";
-				noWinner = false;
-			}
-			else
-			{
-				std::cout << "Player 1 has " << turn2->getStrength() << "strength left\n";
-			}
+			std::cout << "|| Player 2's fighter " << p2Fighter->getName() << " Wins!  ||\n";
+			p2Score++;
+			p2Fighter->recover(p2dmg);
+
+			p1Bench->removeFront();
 		}
-		std::cout << "Press enter to play the next round \n";
-		std::cin.get();
+		if (p2Fighter->getStrength() == 0)
+		{
+			std::cout << "|| Player 1's fighter " << p1Fighter->getName() << " Wins!  ||\n";
+			p1Score++;
+			p1Fighter->recover(p2dmg);
+
+			p2Bench->removeFront();
+		}
 	}
 }
 Game::~Game()
 {
-	delete chr1;
-	delete chr2;
+
 }

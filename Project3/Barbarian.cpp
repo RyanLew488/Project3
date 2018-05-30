@@ -23,7 +23,7 @@ int Barbarian::attack()
 	return atk;
 }
 
-void Barbarian::defend(int damage)
+int Barbarian::defend(int damage)
 {
 	int blocked = diceRoll(2, 6);
 	std::cout << "The Barbarian defended " << blocked << " amount of damage\n";
@@ -44,4 +44,5 @@ void Barbarian::defend(int damage)
 			std::cout << "The Barbarian has " << strength << " points of strength left\n";
 		}
 	}
+	return damageTaken;
 }

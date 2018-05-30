@@ -32,7 +32,7 @@ int HarryPotter::attack()
 /*********************************************************************
 ** Description: Harry potter comes back to life with 20 str after first death
 *********************************************************************/
-void HarryPotter::defend(int damage)
+int HarryPotter::defend(int damage)
 {
 	int blocked = diceRoll(2, 6);
 	std::cout << "Harry Potter defended " << blocked << " amount of damage\n";
@@ -58,5 +58,6 @@ void HarryPotter::defend(int damage)
 		std::cout << "Harry came back to life!\n";
 		strength = 20;
 	}
+	return damageTaken;
 }
 

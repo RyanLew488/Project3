@@ -10,7 +10,7 @@ class Medusa : public Character
 {
 public:
 	int attack();
-	void defend(int damage);
+	int defend(int damage);
 	Medusa(std::string name);
 	~Medusa();
 };

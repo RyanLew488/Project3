@@ -7,7 +7,7 @@
 
 #include <string>
 
-void menu(int& chr1, int& chr2);
+void menu(int& type);
 int iValid(std::string message);
 int iRangeValid(std::string message, int lowerBound, int upperBound);
 bool yesNoValidation();

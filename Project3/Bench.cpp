@@ -59,6 +59,7 @@ CharacterNode * Bench::removeFront()
 		CharacterNode* temp = front;
 
 		front = front->next;
+		front->prev = back;
 		back->next = front;
 		return temp;
 	}

@@ -10,8 +10,8 @@ class HarryPotter : public Character
 {
 public:
 	int attack();
-	void defend(int damage);
 	bool hogwarts;
+	int defend(int damage);
 	HarryPotter(std::string name);
 	~HarryPotter();
 };

@@ -12,17 +12,19 @@
 #include "HarryPotter.hpp"
 #include "Medusa.hpp"
 #include "Vampire.hpp"
-
-
+#include "Bench.hpp"
 
 class Game
 {
 private:
-	Character* chr1;
-	Character* chr2;
+	Bench* p1Bench;
+	Bench* p2Bench;
+	Bench* losers; 
+	int benchSize;
 
 public:
-	Game();
+	Game(int benchSize);
+	void fillBench(int player);
 	void gamePlay();
 	void fight();
 	~Game();

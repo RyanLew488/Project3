@@ -115,7 +115,7 @@ bool yesNoValidation() {
 **				a single value.
 *********************************************************************/
 
-void menu(int& chr1, int& chr2) 
+void menu(int& type) 
 {
 	std::cout << "Please choose the first characters type \n";
 	std::cout << "---------------------\n";
@@ -124,14 +124,5 @@ void menu(int& chr1, int& chr2)
 	std::cout << "3: Bluemen\n";
 	std::cout << "4: Medusa\n";
 	std::cout << "5: Harry Potter\n";
-	chr1 = iRangeValid("", 1, 5);
-
-	std::cout << "Please choose the second characters type \n";
-	std::cout << "---------------------\n";
-	std::cout << "1: Vampire\n";
-	std::cout << "2: Barbarian\n";
-	std::cout << "3: Bluemen\n";
-	std::cout << "4: Medusa\n";
-	std::cout << "5: Harry Potter\n";
-	chr2 = iRangeValid("", 1, 5);
+	type = iRangeValid("", 1, 5);
 }

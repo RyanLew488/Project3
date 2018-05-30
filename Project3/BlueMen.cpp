@@ -31,7 +31,7 @@ int BlueMen::attack()
 /*********************************************************************
 ** Description: Bluemens lose a defend die each time they take 4 points of damage
 *********************************************************************/
-void BlueMen::defend(int damage)
+int BlueMen::defend(int damage)
 {
 	int blocked;
 	int damageTaken;
@@ -65,4 +65,5 @@ void BlueMen::defend(int damage)
 			std::cout << "The Blue Men have " << strength << " points of strength left\n";
 		}
 	}
+	return damageTaken;
 }

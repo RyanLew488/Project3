@@ -12,6 +12,6 @@ public:
 	BlueMen(std::string name);
 	~BlueMen();
 	int attack();
-	void defend(int damage);
+	int defend(int damage);
 };
 

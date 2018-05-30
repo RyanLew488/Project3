@@ -19,9 +19,10 @@ public:
 	void setName(std::string name);
 	std::string getName();
 	virtual int attack() = 0;
-	virtual void defend(int damage) = 0;
+	virtual int defend(int damage) = 0;
 	int diceRoll(int numRolls, int numSides);
 	void setStength(int strength);
 	int getStrength();
+	void recover(int dmgtaken);
 	std::string getType();
 };

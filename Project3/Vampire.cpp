@@ -28,9 +28,9 @@ int Vampire::attack()
 	return atk;
 }
 
-void Vampire::defend(int damage)
+int Vampire::defend(int damage)
 {	
-	int damageTaken;
+	int damageTaken = 0;
 	int charm = 0;
 
 	charm = rand() % 2;
@@ -38,6 +38,7 @@ void Vampire::defend(int damage)
 	if (charm == 1)
 	{
 		std::cout << getName() << " has charmed his opponent he takes no damage\n";
+		return 0;
 	}
 	else
 	{
@@ -61,4 +62,5 @@ void Vampire::defend(int damage)
 			}
 		}
 	}
+	return damageTaken;
 }

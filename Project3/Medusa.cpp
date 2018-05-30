@@ -38,7 +38,7 @@ int Medusa::attack()
 	}
 }
 
-void Medusa::defend(int damage)
+int Medusa::defend(int damage)
 {
 	int blocked = diceRoll(1, 6);
 	std::cout << "Medusa defended " << blocked << " amount of damage\n";
@@ -59,4 +59,5 @@ void Medusa::defend(int damage)
 			std::cout << "Medusa has " << strength << " points of strength left\n";
 		}
 	}
+	return damageTaken;
 }

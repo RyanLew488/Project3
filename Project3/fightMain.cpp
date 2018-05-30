@@ -8,9 +8,12 @@ int main()
 	srand(time(0));
 	while (yesNoValidation())
 	{
-		int choice1, choice2;
-		menu(choice1, choice2);
-		Game game(choice1, choice2);
+		std::cout << "Please select how many fighters each player should have.\n";
+		int benchSize = iValid("");
+		Game game(benchSize);
+
+		game.fillBench(1);
+		game.fillBench(2);
 		game.gamePlay();
 	}
 	return 0;
